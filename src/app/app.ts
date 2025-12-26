@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  template: `
+    <div class="w-screen h-screen bg-slate-500 p-4">
+      <router-outlet/>
+    </div>
+  `
 })
 export class App {
-  protected readonly title = signal('grand-aggro-puzzle');
 }
